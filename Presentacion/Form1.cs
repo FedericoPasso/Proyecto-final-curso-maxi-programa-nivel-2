@@ -88,8 +88,8 @@ namespace Presentacion
 
         private void dgvAudio_SelectionChanged(object sender, EventArgs e)
         {
-            Audio seleccionado = (Audio)dgvAudio.CurrentRow.DataBoundItem;
-            pctbAudio.Load(seleccionado.imagen);
+            Audio Audio1 = (Audio)dgvAudio.CurrentRow.DataBoundItem;
+            pctbAudio.Load(Audio1.imagen);
         }
 
     }
