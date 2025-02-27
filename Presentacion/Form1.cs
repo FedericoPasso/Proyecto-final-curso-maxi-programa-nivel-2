@@ -18,7 +18,7 @@ namespace Presentacion
         private List<Celular> listaCelular;
         private List<Televisor> listaTelevisor;
         private List <Media> listaMedia;
-        private List <Audio> listaAudio;
+        
         
 
         public Form1()
@@ -32,6 +32,8 @@ namespace Presentacion
             productoDatos productos = new productoDatos();
             listaProductos = productos.listaGeneral(); //variable a usar en el picture box
             dgvGeneral.DataSource = listaProductos;
+            dgvGeneral.Columns["imagen"].Visible = false;
+
             cargarImagen(listaProductos[0].imagen);
             
         }
@@ -45,25 +47,29 @@ namespace Presentacion
             CelularDatos celulares = new CelularDatos();
             listaCelular = celulares.ListaCelulares(); //variable a usar en el picture box
             dgvCelulares.DataSource = listaCelular;
+            dgvCelulares.Columns["imagen"].Visible = false;
             cargarImagen(listaCelular[0].imagen);
 
             //tab page de Televisores
             televisoresDatos televisores = new televisoresDatos();
             listaTelevisor = televisores.listaTelevisores(); //variable a usar en el picture box
             dgvTelevisores.DataSource = listaTelevisor;
+            dgvTelevisores.Columns["imagen"].Visible = false;
             cargarImagen(listaTelevisor[0].imagen);
 
             //tab page de Media
             mediaDatos media = new mediaDatos();
             listaMedia = media.listaMedia();  //variable a usar en el picture box  
-            dgvMedia.DataSource = listaMedia; 
+            dgvMedia.DataSource = listaMedia;
+            dgvMedia.Columns["imagen"].Visible = false;
             cargarImagen(listaMedia[0].imagen);
             
             //tab page de Audio
-            audioDatos audio = new audioDatos();
-            listaAudio = audio.listaAudio();    
-            dgvAudio.DataSource = listaAudio;
-            cargarImagen(listaAudio[0].imagen);
+            //audioDatos audio = new audioDatos();
+            //listaAudio = audio.listaAudio();    
+            //dgvAudio.DataSource = listaAudio;
+            //dgvAudio.Columns["imagen"].Visible = false;
+            //cargarImagen(listaAudio[0].imagen);
 
         }
 
@@ -89,32 +95,28 @@ namespace Presentacion
             cargarImagen(media1.imagen);
         }
 
-        private void dgvAudio_SelectionChanged(object sender, EventArgs e)
-        {
-            Audio Audio1 = (Audio)dgvAudio.CurrentRow.DataBoundItem;
-            cargarImagen(Audio1.imagen);
-        }
+       
 
-        private void cargarImagen (string Imagen)
-        {
+       private void cargarImagen (string Imagen)
+       {
             try
             {
                 pctbGeneral.Load(Imagen);
                 pctbCelulares.Load(Imagen);
                 pctbTelevisores.Load(Imagen);
                 pctbMedia.Load(Imagen);
-                pctbAudio.Load(Imagen);
+              
 
             }
             catch (Exception ex)
             {
 
                pctbGeneral.Load("https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=");
-                pctbCelulares.Load("https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=");
-                pctbTelevisores.Load("https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=");
-                pctbMedia.Load("https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=");
-                pctbAudio.Load("https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=");
+               pctbCelulares.Load("https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=");
+               pctbTelevisores.Load("https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=");
+               pctbMedia.Load("https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=");
+              
             }
-        }
+       }
     }
 }

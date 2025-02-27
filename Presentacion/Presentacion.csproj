@@ -46,8 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Audio.cs" />
-    <Compile Include="audioDatos.cs" />
     <Compile Include="Celular.cs" />
     <Compile Include="CelularDatos.cs" />
     <Compile Include="Form1.cs">
