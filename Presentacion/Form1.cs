@@ -80,7 +80,7 @@ namespace Presentacion
         private void dgvTelevisores_SelectionChanged(object sender, EventArgs e)
         {
             Televisor televisor1 = (Televisor)dgvTelevisores.CurrentRow.DataBoundItem;
-            cargarImagen(televisor1 .imagen);
+            cargarImagen(televisor1.imagen);
         }
         private void dgvMedia_SelectionChanged(object sender, EventArgs e)
         {
@@ -100,7 +100,7 @@ namespace Presentacion
                 pctbMedia.Load(Imagen);
               
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                pctbGeneral.Load("https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=");

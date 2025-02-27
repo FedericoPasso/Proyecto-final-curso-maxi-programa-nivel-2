@@ -107,10 +107,12 @@
             // 
             // pctbMedia
             // 
-            this.pctbMedia.Location = new System.Drawing.Point(713, 66);
+            this.pctbMedia.Location = new System.Drawing.Point(719, 66);
+            this.pctbMedia.MaximumSize = new System.Drawing.Size(357, 400);
+            this.pctbMedia.MinimumSize = new System.Drawing.Size(357, 400);
             this.pctbMedia.Name = "pctbMedia";
-            this.pctbMedia.Size = new System.Drawing.Size(357, 266);
-            this.pctbMedia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pctbMedia.Size = new System.Drawing.Size(357, 400);
+            this.pctbMedia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbMedia.TabIndex = 3;
             this.pctbMedia.TabStop = false;
             // 
@@ -152,9 +154,11 @@
             // pctbTelevisores
             // 
             this.pctbTelevisores.Location = new System.Drawing.Point(713, 66);
+            this.pctbTelevisores.MaximumSize = new System.Drawing.Size(357, 400);
+            this.pctbTelevisores.MinimumSize = new System.Drawing.Size(357, 400);
             this.pctbTelevisores.Name = "pctbTelevisores";
-            this.pctbTelevisores.Size = new System.Drawing.Size(357, 266);
-            this.pctbTelevisores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pctbTelevisores.Size = new System.Drawing.Size(357, 400);
+            this.pctbTelevisores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbTelevisores.TabIndex = 3;
             this.pctbTelevisores.TabStop = false;
             // 
@@ -197,9 +201,11 @@
             // pctbCelulares
             // 
             this.pctbCelulares.Location = new System.Drawing.Point(713, 66);
+            this.pctbCelulares.MaximumSize = new System.Drawing.Size(357, 400);
+            this.pctbCelulares.MinimumSize = new System.Drawing.Size(357, 400);
             this.pctbCelulares.Name = "pctbCelulares";
-            this.pctbCelulares.Size = new System.Drawing.Size(357, 266);
-            this.pctbCelulares.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pctbCelulares.Size = new System.Drawing.Size(357, 400);
+            this.pctbCelulares.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbCelulares.TabIndex = 3;
             this.pctbCelulares.TabStop = false;
             // 
@@ -242,9 +248,11 @@
             // pctbGeneral
             // 
             this.pctbGeneral.Location = new System.Drawing.Point(713, 66);
+            this.pctbGeneral.MaximumSize = new System.Drawing.Size(357, 400);
+            this.pctbGeneral.MinimumSize = new System.Drawing.Size(357, 400);
             this.pctbGeneral.Name = "pctbGeneral";
-            this.pctbGeneral.Size = new System.Drawing.Size(357, 266);
-            this.pctbGeneral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pctbGeneral.Size = new System.Drawing.Size(357, 400);
+            this.pctbGeneral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbGeneral.TabIndex = 2;
             this.pctbGeneral.TabStop = false;
             // 
@@ -270,11 +278,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 591);
+            this.ClientSize = new System.Drawing.Size(1120, 606);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.tabControl);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1136, 630);
+            this.MaximumSize = new System.Drawing.Size(1136, 730);
             this.MinimumSize = new System.Drawing.Size(1136, 630);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
