@@ -28,6 +28,7 @@ namespace Presentacion
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //tab page de productos general
             productoDatos productos = new productoDatos();
             listaProductos = productos.listaGeneral(); //variable a usar en el picture box
             dgvGeneral.DataSource = listaProductos;
@@ -40,31 +41,33 @@ namespace Presentacion
         {
             TabPage selectedTab = tabControl.SelectedTab;
             
-            //data grid view de Celulares
+            //tab page de Celulares
             CelularDatos celulares = new CelularDatos();
             listaCelular = celulares.ListaCelulares(); //variable a usar en el picture box
             dgvCelulares.DataSource = listaCelular;
             pctbCelulares.Load(listaCelular[0].imagen);
 
-            //data grid view de Televisores
+            //tab page de Televisores
             televisoresDatos televisores = new televisoresDatos();
             listaTelevisor = televisores.listaTelevisores(); //variable a usar en el picture box
             dgvTelevisores.DataSource = listaTelevisor;
             pctbTelevisores.Load(listaTelevisor[0].imagen);
 
-            //data grid view de Media
+            //tab page de Media
             mediaDatos media = new mediaDatos();
             listaMedia = media.listaMedia();  //variable a usar en el picture box  
             dgvMedia.DataSource = listaMedia; 
             pctbMedia.Load(listaMedia[0].imagen);
             
-            //data grid view de Audio
+            //tab page de Audio
             audioDatos audio = new audioDatos();
             listaAudio = audio.listaAudio();    
             dgvAudio.DataSource = listaAudio;
             pctbAudio.Load(listaAudio[0].imagen);
 
         }
+
+        //todos estos metodos son para que se produzca el cambio de imagen a la hora de seleccionar una fila en el data grid view
         private void dgvGeneral_SelectionChanged(object sender, EventArgs e)
         {
             Producto producto1 = (Producto)dgvGeneral.CurrentRow.DataBoundItem;
