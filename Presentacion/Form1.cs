@@ -33,7 +33,6 @@ namespace Presentacion
             listaProductos = productos.listaGeneral(); //variable a usar en el picture box
             dgvGeneral.DataSource = listaProductos;
             dgvGeneral.Columns["imagen"].Visible = false;
-
             cargarImagen(listaProductos[0].imagen);
             
         }
@@ -64,12 +63,6 @@ namespace Presentacion
             dgvMedia.Columns["imagen"].Visible = false;
             cargarImagen(listaMedia[0].imagen);
             
-            //tab page de Audio
-            //audioDatos audio = new audioDatos();
-            //listaAudio = audio.listaAudio();    
-            //dgvAudio.DataSource = listaAudio;
-            //dgvAudio.Columns["imagen"].Visible = false;
-            //cargarImagen(listaAudio[0].imagen);
 
         }
 
@@ -106,7 +99,6 @@ namespace Presentacion
                 pctbTelevisores.Load(Imagen);
                 pctbMedia.Load(Imagen);
               
-
             }
             catch (Exception ex)
             {
