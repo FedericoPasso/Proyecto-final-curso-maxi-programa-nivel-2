@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Presentacion
+namespace Dominio
 {
-    internal class Media : Producto
+    public class Celular : Producto
     {
+
     }
 }

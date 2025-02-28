@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Presentacion
+namespace Dominio
 {
-    internal class Televisor : Producto
+    public class Media : Producto
     {
     }
 }

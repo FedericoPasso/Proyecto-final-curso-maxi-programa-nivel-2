@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Presentacion
+namespace Dominio
 {
-    internal class Celular : Producto
+    public class Class1
     {
-
     }
 }

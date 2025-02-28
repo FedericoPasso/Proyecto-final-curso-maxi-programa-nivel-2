@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace Presentacion
+namespace Dominio
 {
-    internal class televisoresDatos
+    public class CelularDatos
     {
-        public List<Televisor> listaTelevisores()
+        public List<Celular> ListaCelulares()
         {
-            List<Televisor> listaTelevisores = new List<Televisor>();
+            List<Celular> ListaCelulares = new List<Celular>();
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
             SqlDataReader lector;
@@ -20,33 +20,35 @@ namespace Presentacion
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select A.Nombre, M.Descripcion Marca, A.Descripcion, A.Precio, ImagenUrl from ARTICULOS A, MARCAS M where IdCategoria = 2 and IdMarca = M.Id";
+                comando.CommandText = "select A.Nombre, M.Descripcion Marca, A.Descripcion, A.Precio, ImagenUrl from ARTICULOS A, MARCAS M where IdCategoria = 1 and IdMarca = M.Id";
                 comando.Connection = conexion;
 
                 conexion.Open();
                 lector = comando.ExecuteReader();
-
+                
                 while (lector.Read())
                 {
-                    Televisor aux = new Televisor();
+                    Celular aux = new Celular();
+
                     aux.nombre = lector.GetString(0);
-                    aux.marca = lector.GetString(1); 
-                    aux.descripcion = lector.GetString(2);  
-                    aux.precio = lector.GetDecimal(3);
-                    aux.imagen = lector.GetString(4); 
+                    aux.marca = lector.GetString(1);
+                    aux.descripcion = lector.GetString(2);
+                    aux.precio = lector.GetDecimal (3);
+                    aux.imagen = lector.GetString (4);
                     
-
-                    listaTelevisores.Add(aux);
-
+                    ListaCelulares.Add(aux);
                 }
                 conexion.Close();
-                return listaTelevisores;            
+                return ListaCelulares;
             }
             catch (Exception ex)
             {
 
                 throw ex;
             }
+        
+        
+        
         }
     }
 }

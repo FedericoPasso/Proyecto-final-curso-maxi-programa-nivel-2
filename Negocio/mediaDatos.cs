@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace Presentacion
+namespace Dominio
 {
-    internal class mediaDatos
+    public class mediaDatos
     {
         public List<Media> listaMedia()
         {

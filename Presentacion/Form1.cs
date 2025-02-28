@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
+using Datos;
 
 namespace Presentacion
 {
@@ -17,7 +19,7 @@ namespace Presentacion
         private List<Producto> listaProductos;
         private List<Celular> listaCelular;
         private List<Televisor> listaTelevisor;
-        private List <Media> listaMedia;
+        private List <Media> listaMedia; 
         
         
 
